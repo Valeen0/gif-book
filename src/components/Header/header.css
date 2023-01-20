@@ -1,0 +1,22 @@
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .8rem;
+    padding: .5rem;
+}
+
+.form_container form{
+    display: flex;
+}
+
+.topics_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.topic{
+    margin: .2rem .4rem;
+}
+
