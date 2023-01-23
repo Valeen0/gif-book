@@ -14,13 +14,17 @@ html{
 body{
     margin: 0;
     padding: 0;
-    background: #dddddd;
+    background: #131313;
 }
 
 a{
     color: #485bca;
     text-decoration: none;
     cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, span, p{
+    color: rgb(212, 212, 212);
 }
 
 h1{

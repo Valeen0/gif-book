@@ -1,0 +1,20 @@
+.gifs-container{
+    width: 1000px;
+    column-count: 4;
+    column-gap: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+.gifs-container a{
+    padding: .5rem;
+    display: inline-block;
+    width: 250px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.gifs-container a img{
+    border-radius: inherit;
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}

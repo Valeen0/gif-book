@@ -1,6 +1,8 @@
 import './App.css';
-import { Header } from './components/Header/Header';
 import { Route } from 'wouter';
+import { Header } from './components/Header/Header';
+import { Home } from './components/Home/Home';
+import { Search } from './components/Search/Search';
 
 function App() {
 
@@ -8,7 +10,8 @@ function App() {
     <div className="App">
       <Header/>
 
-      <Route path='/search/:keyword' />
+      <Route path='/' component={Home} />
+      <Route path='/search/:keyword' component={Search} />
 
     </div>
   )

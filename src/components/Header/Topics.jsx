@@ -6,8 +6,6 @@ export function Topics({  }){
 
     const { loading, topics } = useTopics();
 
-    console.log(loading, topics)
-
     return (
       <nav className="topics_container">
         <TopicList list={topics}/>
