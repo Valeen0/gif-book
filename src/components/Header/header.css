@@ -6,6 +6,10 @@ header{
     gap: .8rem;
     padding: .5rem;
 }
+.logo_container * {
+    font-size: 2rem;
+    font-weight: bold;
+}
 
 .form_container form{
     display: flex;

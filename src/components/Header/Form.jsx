@@ -1,44 +1,43 @@
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
 import { useLocation } from 'wouter';
 
-export function Form({  }){
+export function Form({}) {
 
-    const [ keyword, setKeyword ] = useState('');
-    const [ path, pushPath ] = useLocation();
+  const inputRef = useRef(null);
+  const [path, pushPath] = useLocation();
 
-    function clearForm(){
-        setKeyword("");
-    }
+  function formReset(e){
+    e.target.reset();
+  }
 
-    function handleChange(event){
-        setKeyword(event.target.value);
-    }
+  function handleSubmit(event) {
+    event.preventDefault();
+    const keyword = inputRef.current.value;
 
-    function handleSubmit(event){
-        event.preventDefault();
-        if(keyword.trim() === '') return;
+    if (keyword.trim() === "") return;
 
-        pushPath(`/search/${keyword}`);
-        clearForm();
-    }
+    pushPath(`/search/${keyword}`);
+    formReset(event);
+  }
 
-    return (
-      <div className="form_container">
-        <form onSubmit={handleSubmit}>
-          <div className="fieldset">
-            <input
-              type="text"
-              name="keyword"
-              placeholder='Buscar gif'
-              onChange={handleChange}
-              value={keyword}
-            />
-          </div>
-          <div className="fieldset">
-            <button type="submit">Buscar</button>
-          </div>
-        </form>
-      </div>
-    );
+  return (
+    <div className="form_container">
+      <form onSubmit={handleSubmit}>
+        
+        <div className="fieldset">
+          <input
+            type="text"
+            name="keyword"
+            ref={inputRef}
+            placeholder="Buscar gif"
+          />
+        </div>
 
+        <div className="fieldset">
+          <button type="submit">Buscar</button>
+        </div>
+
+      </form>
+    </div>
+  );
 }
