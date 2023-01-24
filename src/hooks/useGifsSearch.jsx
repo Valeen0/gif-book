@@ -13,7 +13,6 @@ export function useGifsSearch(keyword){
         isLoading(true)
         getData(url)
             .then(({data})=>{
-                console.log(data)
                 setGifs(data);
                 isLoading(false)
         })
