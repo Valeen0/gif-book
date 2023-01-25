@@ -7,7 +7,7 @@ export function Gif({ id, image = "", title = "" }){
         <Link href={`/gif/${id}`}>
 
             <a className='gif'>
-                <img src={image} alt={title} />
+                <img loading='lazy' src={image} alt={title} />
             </a>
 
         </Link>

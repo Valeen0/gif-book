@@ -9,7 +9,7 @@ export function Header({  }){
     return(
         <header>
             <div className='logo_container'>
-                <Link to="/">
+                <Link className='primary_title' to="/">
                     GifBook
                 </Link>
             </div>
