@@ -2,13 +2,11 @@ import './gif_viewer.css';
 import React from 'react';
 import { useGifById } from '../../hooks/useGifById';
 import { Loader } from '../Loader/Loader';
-import { Like } from './Like';
 
 export function GifViewer({ params }){
     const { id } = params;
 
     const { loading, gif } = useGifById(id);
-    console.log(gif)
 
     if(loading)
         return(
@@ -30,9 +28,6 @@ export function GifViewer({ params }){
                     <img src={gif.images.original.url} alt={gif.title} />
                 </div>
 
-                <div className='gif-controls'>
-                    <Like gifId={gif.id} gifUrl={gif.images.original.url}/>
-                </div>
             </div>
 
         </section>

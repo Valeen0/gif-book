@@ -35,7 +35,7 @@ export function Form({}) {
 
         <div className="fieldset">
           <button type="submit">
-            <img src="src/assets/img/search.svg"/>
+            <img src="/src/assets/img/search.svg"/>
           </button>
         </div>
 
