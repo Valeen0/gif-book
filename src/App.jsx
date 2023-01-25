@@ -9,13 +9,16 @@ function App() {
 
   return (
     <div className="App">
-      <Header/>
+      <Header />
 
-      <Route path='/' component={Home} />
-      <Route path='/search/:keyword' component={Search} />
-      <Route path='/gif/:id' component={GifViewer} />
+      <main className="main_container">
+        <Route path="/" component={Home} />
+        <Route path="/search/:keyword" component={Search} />
+
+        <Route path="/gif/:id" component={GifViewer} />
+      </main>
     </div>
-  )
+  );
 }
 
 export default App
